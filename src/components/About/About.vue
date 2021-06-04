@@ -6,10 +6,11 @@ This webpage was made using the
 <a href={{hyperlinks.vue}}>Vue.js</a> 
 framework. 
 <br>
-It is running on a Debian 10 instance I've deployed with
+It is running on a Debian 10 instance with
 <a href={{hyperlinks.vultr}}>Vultr Cloud Hosting</a>
-
-
+<br>
+Served to you with <a href={{hyperlinks.nginx}}>Nginx</a>
+.
 </li>
 </ul>
   </div>
@@ -25,7 +26,8 @@ export default {
       return{
           hyperlinks:{
               "vue":"https://v3.vuejs.org/guide/migration/introduction.html#overview",
-              "vultr":"https://vultr.com"
+              "vultr":"https://vultr.com",
+              "nginx":"https://nginx.org"
           }
       }
   }
@@ -34,9 +36,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
+
 ul {
   list-style-type: none;
   padding: 0;

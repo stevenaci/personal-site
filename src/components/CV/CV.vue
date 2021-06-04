@@ -3,6 +3,7 @@
 <ul>
 <li>
 <resume/>
+<github/>
 <br>
 </li>
 </ul>
@@ -12,10 +13,13 @@
 <script>
 
 import Resume from './Resume.vue'
+import Github from './Github.vue'
+
 export default {
   name: 'CV',
   components: {
-    resume:Resume
+    resume:Resume,
+    github:Github
   },
   props: {
     msg: String

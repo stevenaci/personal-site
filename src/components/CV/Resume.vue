@@ -1,14 +1,11 @@
 <template>
     <div>
-        hi
-        <div v-html="reurl" ></div>
+    <div v-html="reurl" ></div>
 
     </div>
   </template>
   
   <script>
-  import resumecontent from './src/components/CV/resume.js'
-  
   export default {
     name: 'Resume',
     props: { 
@@ -16,7 +13,7 @@
     },
     data: function(){
         return{
-                "reurl": resumecontent
+                "reurl": ""
             
         }
     },

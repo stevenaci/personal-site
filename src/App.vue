@@ -1,21 +1,30 @@
 <template>
   <div>
-    <nav class="nav-bar">
-      <router-link class="nav-item med-bg" to="/home">Home</router-link>
-      <br>
-      <router-link class="nav-item med-bg" to="/cv">CV</router-link>
-      <br>
-      <router-link class="nav-item med-bg" to="/about">About This Page</router-link>
+    <nav>
+      <table>
+        <tr>
+          <td>
+      <RouteCap routeto="/home" text="Home"/>
+          </td>
+          <td>
+      <RouteCap routeto="/cv" text="CV"/>
+          </td>
+          <td>
+      <RouteCap routeto="/about" text="About this page"/>
+          </td>
+          </tr>
+        </table>
     </nav>
-    <router-view></router-view>
+    <router-view class="window"></router-view>
   </div>
 </template>
 <script>
+import RouteCap from './components/Shared/RouteCapsule.vue'
 
 export default {
   name: 'App',
   components: {
-
+    RouteCap
   }
 }
 
@@ -27,62 +36,62 @@ export default {
     font-family: Noto;
     src: url("assets/NotoSerifJP-Medium.otf") format("opentype");
 }
+:root{
+  --pale-grn:#dff2d8;
+  --olive-grn:#5b8266;
+  --pale-blu:#acb0eb;
+  --palr-blu:#eeefff;
+  --drk-ceru:#45448f;
+  --vdrk-ceru:#292855;
+  --drk-blu:#2c303d;
+  --drk-sefoam:#2c3e50;
+}
 
 #app {
   font-family: 'Noto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: var(--drk-ceru);
+
+  font-size: 0.8em;
 }
 
-.nav-bar{
-  border:2px solid #5b8266;
-  border-radius: 13px;
-  text-align:left;
-  width:15%;
-  padding-left:2px;
+td {
+  border: 2px solid var(--palr-blu);
+  overflow:scroll;
+}
+
+nav{
+
+  border:2px solid var(--pale-blu);
+  display:inline-block;
+  width:auto;
+  font-size:1.2em;
 }
 
 @keyframes hoverblink{
-    from {background-color: #5b8266;}
-  to {background-color:#dff2d8;}
+    from {background-color: var(--olive-grn);}
+  to {background-color: var(--pale-grn)}
 }
 
-.nav-item{
-  display: inline-block;
-  text-align:left;
-  padding-top:10px;
-  padding-bottom:10px;
-  padding-left:8px;
-  width:80%;
-  word-spacing:1px;
-  border-radius: 13px;
-}
-.nav-item:hover{
-  animation-name: hoverblink;
-  animation-duration: .5s;
-  animation-iteration-count:infinite;
-  animation-direction: alternate;
+.highlight:hover{
+  background-color:var(--palr-blu)
+
 }
 
-.med-light-bg{
-  background-color:#dff2d8;
+button{
+  background-color:var(--pale-blu);
+  width: 100%;
+  color: var(--vdrk-ceru);
+  border: 0x none var(--drk-ceru);
 }
-.dark-bg{
-  background-color:#353535;
+input{
+    background-color:var(--palr-blu);
 }
-.light-bg{
-  background-color:#ffe1ea;
-}
-.med-bg{
-  background-color:#5b8266;
-}
-
 body{
-  background-color:#5b8266;
+  background-color:var(--palr-blu);
+  
 }
-
 
 </style>
