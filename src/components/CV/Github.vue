@@ -1,6 +1,15 @@
 <template>
   <div class="github">
     <table>
+      <!-- <tr>
+        <td>
+          <button class="highlight" v-on:click="update_user(username)"> refresh </button>
+          <input type="text" v-model="username" />
+        </td>
+      </tr> -->
+      <tr>
+
+        </tr>
       <tr>
         <td>
           <img class="avatar" :src="userdata.avatar_url" />
@@ -54,7 +63,7 @@
       <tr>
         <td>
           <div
-            class="repos highlight"
+            class="repos"
             v-for="r in repos_sorted.op"
             :key="r.url"
             v-on:mouseover="display_repo = r"
@@ -75,12 +84,12 @@
       <tr>
         <td>
           <div
-            class="repos highlight"
+            class="repos"
             v-for="r in repos_sorted.forked"
             :key="r.url"
             v-on:mouseover="display_repo = r"
           >
-            <button class="repobtn highlight" v-on:click="go_to(r.html_url)">
+            <button class="repobtn highlight blink" v-on:click="go_to(r.html_url)">
               {{ r.name }}
             </button>
 
@@ -90,10 +99,7 @@
 <tr class="spacer">
   </tr>
       <tr>
-        <td>
-          <button class="highlight" v-on:click="update_user(username)">fetch git user</button>
-          <input type="text" v-model="username" />
-        </td>
+
       </tr>
 
     </table>

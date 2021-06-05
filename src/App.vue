@@ -4,13 +4,13 @@
       <table>
         <tr>
           <td>
-      <RouteCap routeto="/home" text="Home"/>
+      <RouteCap routeto="/home" text="home"/>
           </td>
           <td>
-      <RouteCap routeto="/cv" text="CV"/>
+      <RouteCap routeto="/cv" text="github"/>
           </td>
           <td>
-      <RouteCap routeto="/about" text="About this page"/>
+      <RouteCap routeto="/about" text="about"/>
           </td>
           </tr>
         </table>
@@ -59,9 +59,12 @@ export default {
 
 td {
   border: 2px solid var(--palr-blu);
+
   overflow:scroll;
 }
-
+table{
+    border-collapse:collapse;
+}
 nav{
 
   border:2px solid var(--pale-blu);
@@ -70,16 +73,21 @@ nav{
   font-size:1.2em;
 }
 
-@keyframes hoverblink{
-    from {background-color: var(--olive-grn);}
-  to {background-color: var(--pale-grn)}
+@keyframes blink{
+  0% {background-color: var(--palr-blu)}
+  50% {background-color: var(--pale-blu)}
+  100% {background-color: var(--palr-blu)}
 }
+
 
 .highlight:hover{
-  background-color:var(--palr-blu)
-
+  background-color:var(--palr-blu);
+  animation: 5s infinite linear blink;
 }
 
+.blink{
+  animation: 5s infinite linear blink;
+}
 button{
   background-color:var(--pale-blu);
   width: 100%;
@@ -90,7 +98,7 @@ input{
     background-color:var(--palr-blu);
 }
 body{
-  background-color:var(--palr-blu);
+  background-color:var(--pale-blu);
   
 }
 
