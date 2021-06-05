@@ -85,16 +85,16 @@
             </button>
 
           </div>
-        </td>5
+        </td>
       </tr>
 <tr class="spacer">
   </tr>
-      <!-- <tr>
+      <tr>
         <td>
           <button class="highlight" v-on:click="update_user(username)">fetch git user</button>
           <input type="text" v-model="username" />
         </td>
-      </tr> -->
+      </tr>
 
     </table>
   </div>
