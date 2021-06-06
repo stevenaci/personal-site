@@ -48,10 +48,12 @@ export default {
 }
 
 #app {
+  
   font-family: 'Noto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow:hidden;
   color: var(--drk-ceru);
 
   font-size: 0.8em;

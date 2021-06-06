@@ -29,16 +29,10 @@ export default {
   padding-left:8px;
   padding-right:8px;
 
-  word-spacing:1px;
-  opacity:100%;
-
   color: var(--drk-ceru);
   font-size: 0.8em;
 }
 
-@keyframes fadein{
-  from{opacity:auto;}
-  to{opacity:100%;}
-}
+
 
 </style>
