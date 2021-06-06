@@ -64,7 +64,7 @@ export const router = createRouter({
     ]
 })
 const app = createApp(App)
-
+document.title = "S C 2021"
 app.use(router)
 //app.use(store)
 app.mount('#app')

@@ -10,7 +10,7 @@
       <RouteCap routeto="/cv" text="github"/>
           </td>
           <td>
-      <RouteCap routeto="/about" text="about"/>
+      <RouteCap routeto="/about" text="about the site"/>
           </td>
           </tr>
         </table>

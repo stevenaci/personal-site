@@ -1,16 +1,13 @@
 <template>
   <div class="hello">
+    <h2>about the site</h2>
 <ul>
-<li>
-This webpage was made using the
-<a href={{hyperlinks.vue}}>Vue.js</a> 
-framework. 
+<li> I made this page with the help of <a :href="hyperlinks.vue">vue.js</a> and javascript. The source code is on my <a :href="hyperlinks.github">github</a>.
 <br>
-It is running on a Debian 10 instance with
-<a href={{hyperlinks.vultr}}>Vultr Cloud Hosting</a>
-<br>
-Served to you with <a href={{hyperlinks.nginx}}>Nginx</a>
-.
+Its being served via
+<a :href="hyperlinks.nginx">nginx</a> on a 
+<a :href="hyperlinks.vultr">vultr.com</a> VPS.
+
 </li>
 </ul>
   </div>
@@ -27,7 +24,8 @@ export default {
           hyperlinks:{
               "vue":"https://v3.vuejs.org/guide/migration/introduction.html#overview",
               "vultr":"https://vultr.com",
-              "nginx":"https://nginx.org"
+              "nginx":"https://nginx.org",
+              "github":"https://sc3.xyz/cv"
           }
       }
   }
@@ -46,6 +44,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #12882f;
 }
 </style>

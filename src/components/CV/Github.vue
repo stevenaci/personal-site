@@ -29,7 +29,7 @@
               </td>
             </tr>
             <tr>
-              <td>Location: {{ userdata.location }}</td>
+              <td>Location: </td>
               <td>
                 {{ userdata.location }}
               </td>
@@ -89,7 +89,7 @@
             :key="r.url"
             v-on:mouseover="display_repo = r"
           >
-            <button class="repobtn highlight blink" v-on:click="go_to(r.html_url)">
+            <button class="repobtn highlight" v-on:click="go_to(r.html_url)">
               {{ r.name }}
             </button>
 
