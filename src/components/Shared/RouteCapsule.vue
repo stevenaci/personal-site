@@ -28,7 +28,7 @@ export default {
   text-align:left;
   padding-left:8px;
   padding-right:8px;
-
+  opacity:unset;
   color: var(--drk-ceru);
   font-size: 0.8em;
 }
