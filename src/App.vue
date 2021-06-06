@@ -62,7 +62,6 @@ export default {
 td {
   border: 2px solid var(--palr-blu);
 
-  overflow:scroll;
 }
 table{
     border-collapse:collapse;
