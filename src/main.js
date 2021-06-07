@@ -5,7 +5,7 @@ import { createWebHistory, createRouter} from 'vue-router'
 import Home from './components/Home/Home.vue'
 import About from './components/About/About.vue'
 import CV from './components/CV/CV.vue'
-
+import Github from './components/CV/Github.vue'
 // const store = createStore({
 //     state () {
 //       return {
@@ -50,12 +50,8 @@ export const router = createRouter({
             component: CV
         },
         {
-          path:'/home',
-          component: Home,
-        },
-        {
-          path:'/cv',
-          component: CV,
+          path:'/git',
+          component: Github,
         },
         {
           path:'/about',

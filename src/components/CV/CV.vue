@@ -3,7 +3,7 @@
 <ul>
 <li>
 <resume/>
-<github/>
+
 <br>
 </li>
 </ul>
@@ -13,13 +13,13 @@
 <script>
 
 import Resume from './Resume.vue'
-import Github from './Github.vue'
+
 
 export default {
   name: 'CV',
   components: {
     resume:Resume,
-    github:Github
+
   },
   props: {
     msg: String
@@ -42,14 +42,7 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+
 a {
   color: #42b983;
 }

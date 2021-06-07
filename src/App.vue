@@ -3,11 +3,11 @@
     <nav>
       <table>
         <tr>
-          <td>
+          <!-- <td>
       <RouteCap routeto="/home" text="home"/>
-          </td>
+          </td> -->
           <td>
-      <RouteCap routeto="/cv" text="github"/>
+      <RouteCap routeto="/git" text="github"/>
           </td>
           <td>
       <RouteCap routeto="/about" text="about the site"/>
@@ -80,6 +80,14 @@ nav{
   100% {background-color: var(--palr-blu)}
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
 
 .highlight:hover{
   background-color:var(--palr-blu);
