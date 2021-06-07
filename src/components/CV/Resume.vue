@@ -1,6 +1,8 @@
 <template>
     <div>
-    <div v-html="reurl" ></div>
+    <div>
+      
+    </div>
 
     </div>
   </template>
@@ -13,7 +15,6 @@
     },
     data: function(){
         return{
-                "reurl": ""
             
         }
     },
