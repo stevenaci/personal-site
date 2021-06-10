@@ -17,10 +17,7 @@ It is hosted via
 </td>
   </tr>
   </table>
-
 <br>
-
-
 </li>
 </ul>
   </div>
@@ -38,8 +35,6 @@ export default {
               "vue":"https://v3.vuejs.org/guide/migration/introduction.html#overview",
               "vultr":"https://vultr.com",
               "nginx":"https://nginx.org"
-              // ,
-              // "github":"https://sc3.xyz/cv"
           }
       }
   }
