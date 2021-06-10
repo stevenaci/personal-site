@@ -36,10 +36,7 @@
               </td>
             </tr>
             <tr>
-              <td>Public Repos:</td>
-              <td>
-                {{ userdata.public_repos }}
-              </td>
+
             </tr>
 
             <tr>
@@ -55,29 +52,28 @@
       <tr class="spacer">
   </tr>
       <tr>
-        <td class="hdr">Repos</td>
-        <td>
-          {{ display_repo.name }}
-        </td>
+        <td class="hdr">Projects</td>
+      <td class="hdr">
+        Details
+      </td>
       </tr>
-
       <tr>
-        <td>
-          <div
+        <table>
+          <tr
             class="repos"
             v-for="r in repos_sorted.op"
             :key="r.url"
             v-on:mouseover="display_repo = r"
           >
-            <button class="repobtn highlight" v-on:click="go_to(r.html_url)">
+          <td>
+                        <button class="repobtn highlight" v-on:click="go_to(r.html_url)">
               {{ r.name }}
             </button>
+          </td>
 
-          </div>
-        </td>
-        <td id="repodesc">
-          {{ display_repo.description }}
-        </td>
+
+          </tr>
+      <tr>
       </tr>
       <tr class="hdr">
         <td>Forks and Contributions:</td>
@@ -93,18 +89,39 @@
             <button class="repobtn highlight" v-on:click="go_to(r.html_url)">
               {{ r.name }}
             </button>
-
           </div>
         </td>
       </tr>
-<tr class="spacer">
-  </tr>
+
       <tr>
 
       </tr>
-
-    </table>
   
+        </table>   
+
+  <td id="repodesc">
+    <table>
+
+      <tr>
+        <td>Description</td>
+        <td>
+        {{ display_repo.description }}
+        </td>
+      </tr>
+      
+      <tr>
+        <td>Language:</td>
+        
+        <td>{{ display_repo.language }}</td>
+      </tr>
+    </table>
+
+  </td>
+      </tr>
+    </table>
+
+    <tr>      </tr>
+
     </li>
   </div>
 </template>
@@ -206,7 +223,7 @@ export default {
 .hdr{
   
   border: 2x solid var(--drk-ceru);
-
+  text-align:center;
 }
 #repodesc {
   width: 300px;
