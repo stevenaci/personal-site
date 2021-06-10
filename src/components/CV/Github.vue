@@ -54,7 +54,7 @@
       <tr>
         <td class="hdr">Projects</td>
       <td class="hdr">
-        Details
+
       </td>
       </tr>
       <tr>
@@ -94,17 +94,22 @@
       </tr>
 
       <tr>
-
       </tr>
   
         </table>   
 
-  <td id="repodesc">
+  <td >
     <table>
-
+<tr>
+  </tr>
+  <tr>
+    <td/>
+            <td>Details</td>
+    </tr>
       <tr>
+
         <td>Description</td>
-        <td>
+        <td class="desc">
         {{ display_repo.description }}
         </td>
       </tr>
@@ -225,8 +230,9 @@ export default {
   border: 2x solid var(--drk-ceru);
   text-align:center;
 }
-#repodesc {
-  width: 300px;
+.desc {
+  width:300px;
+  height:100px;
   overflow:scroll;
 }
 .spacer{
