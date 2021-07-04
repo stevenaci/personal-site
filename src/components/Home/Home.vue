@@ -1,6 +1,14 @@
 <template>
   <div class="hello">
+    Welcome to my personal webpage:
+
+    I'm looking for opportunities in working on small teams interesting projects.  
     
+  <table>
+    <tr><td></td><td></td></tr>
+    <tr></tr>
+    <tr></tr>
+  </table>
 
   </div>
 </template>

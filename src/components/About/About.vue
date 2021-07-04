@@ -6,14 +6,14 @@
   <table>
 <tr>
   <td>
-  This page was made with <a :href="hyperlinks.vue">vue.js</a>. 
+  This page was made with the help of <a :href="hyperlinks.vue">vue.js</a>. 
   </td>
   </tr>
 <tr>
   <td>
 It is hosted via
 <a :href="hyperlinks.nginx">nginx</a> on a 
-<a :href="hyperlinks.vultr">vultr.com</a> VPS.
+<a :href="hyperlinks.vultr">vultr.com</a> VPS. 
 </td>
   </tr>
   </table>
