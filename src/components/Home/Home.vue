@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-    Welcome to my personal webpage:
-
-    I'm looking for opportunities in working on small teams interesting projects.  
+    Welcome to my personal website, I hope you like it. 
+    <br>There's not much here yet
     
   <table>
     <tr><td></td><td></td></tr>
