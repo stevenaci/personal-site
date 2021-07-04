@@ -16,6 +16,10 @@
         </table>
     </nav>
     <router-view class="window"></router-view>
+    <footer>
+      Steven Carino 2021 
+      email: stevenalexcarino@gmail.com
+    </footer>
   </div>
 </template>
 <script>
