@@ -47,7 +47,7 @@ export const router = createRouter({
     routes: [
         {
             path:'/',
-            component: CV
+            component: Home
         },
         {
           path:'/git',
