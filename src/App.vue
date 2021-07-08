@@ -7,6 +7,9 @@
       <RouteCap routeto="/home" text="home"/>
           </td> -->
           <td>
+      <RouteCap routeto="/" text="home"/>
+          </td>
+          <td>
       <RouteCap routeto="/git" text="github"/>
           </td>
           <td>
@@ -16,10 +19,7 @@
         </table>
     </nav>
     <router-view class="window"></router-view>
-    <footer>
-      Steven Carino 2021 
-      email: stevenalexcarino@gmail.com
-    </footer>
+
   </div>
 </template>
 <script>
@@ -91,6 +91,7 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+  width:550px;
 }
 
 .highlight:hover{

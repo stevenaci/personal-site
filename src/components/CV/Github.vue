@@ -132,8 +132,6 @@
 </template>
 
 <script>
-const axios = require("axios");
-
 export default {
   name: "Github",
   components: {},
@@ -151,27 +149,17 @@ export default {
       display_repo: {
         name: undefined,
         description: undefined,
-      },
-      repos: [],
-      username: "stevenaci",
+      }
     };
   },
   computed: {
     userdata: function () {
-      return this.user;
-    },
-    links: function () {
-      return {
-        user: "https://api.github.com/users/" + this.username,
-        repos: "https://api.github.com/users/" + this.username + "/repos",
-      };
+      return this.$store.getters.github_user;
     },
     repos_sorted: function () {
-      var forked = this.repos.filter((x) => x.fork == true);
-      var op = this.repos.filter((x) => x.fork == false);
       return {
-        forked: forked,
-        op: op,
+        forked: this.$store.getters.repos_forked,
+        op: this.$store.getters.repos_op
       };
     },
     displayreponame: function () {
@@ -181,8 +169,10 @@ export default {
       return this.display_repo.description;
     },
   },
-  async created() {
-    this.update_user(this.username);
+  async beforeMount() {
+      this.$store.commit('update_github')
+      console.log("github created")
+      console.log(this.$store.getters.github_user)
   },
   methods: {
     format_timestamp: function (timestamp) {
@@ -192,16 +182,8 @@ export default {
     },
     go_to: function (url) {
       window.location.href = url;
-    },
-    update_user: function (u) {
-      this.username = u;
-      axios.get(this.links.user).then((resp) => {
-        this.user = resp.data;
-      });
-      axios.get(this.links.repos).then((resp) => {
-        this.repos = resp.data;
-      });
-    },
+    }
+
   },
 };
 </script>
@@ -218,10 +200,7 @@ export default {
 .avatar {
   width: 95px;
 }
-.usrtbl {
 
-  width: 100px;
-}
 .repos{
   text-align:left;
 }
