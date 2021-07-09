@@ -11,7 +11,7 @@
     Right now this page is just a frontend for my github.com, but I'll be adding links to some of my other projects and webpages soon.
   </ul>
   <ul>
-    If you're interested in working with me, please contact me: <div class="highlight"> stevenalexcarino@gmail.com </div>
+    If you're interested in working with me: <div class="highlight"> stevenalexcarino@gmail.com </div>
   </ul>
 </li>
   </div>
