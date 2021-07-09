@@ -27,13 +27,17 @@ export const store = createStore({
       github_user: state=> {
         return state.github.user;
       },
-      repos_forked: state=>{
-        console.log(state.github.repos)
-        return state.github.repos.filter((x) => x.fork == true);
+      repos: state=>{
+      console.log(state.github.repos)
+      return state.github.repos;
       },
-      repos_op: state=>{
-        return state.github.repos.filter((x) => x.fork == false);
-      }
+      // repos_forked: state=>{
+      //   console.log(state.github.repos)
+      //   return state.github.repos.filter((x) => x.fork == true);
+      // },
+      // repos_op: state=>{
+      //   return state.github.repos.filter((x) => x.fork == false);
+      // }
 
     }
   });

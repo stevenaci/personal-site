@@ -52,45 +52,29 @@
       <tr class="spacer">
   </tr>
       <tr>
-        <td class="hdr">Projects</td>
-      <td class="hdr">
+      <td class="hdr">Projects</td>
 
-      </td>
       </tr>
       <tr>
         <table>
           <tr
-            class="repos"
-            v-for="r in repos_sorted.op"
+            :class="repos"
+            v-for="r in repos_sorted"
             :key="r.url"
             v-on:mouseover="display_repo = r"
           >
           <td>
-                        <button class="repobtn highlight" v-on:click="go_to(r.html_url)">
+              <button class="repobtn highlight_rollover" v-on:click="go_to(r.html_url)">
               {{ r.name }}
+
             </button>
           </td>
-
 
           </tr>
       <tr>
       </tr>
       <tr class="hdr">
-        <td>Forks and Contributions:</td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            class="repos"
-            v-for="r in repos_sorted.forked"
-            :key="r.url"
-            v-on:mouseover="display_repo = r"
-          >
-            <button class="repobtn highlight" v-on:click="go_to(r.html_url)">
-              {{ r.name }}
-            </button>
-          </div>
-        </td>
+
       </tr>
 
       <tr>
@@ -111,12 +95,13 @@
         <td>Description</td>
         <td class="desc">
         {{ display_repo.description }}
+        {{ errormsg }}
         </td>
       </tr>
       
       <tr>
         <td>Language:</td>
-        
+
         <td>{{ display_repo.language }}</td>
       </tr>
     </table>
@@ -140,6 +125,7 @@ export default {
   },
   data: function () {
     return {
+      errormsg:"",
       user: {
         avatar_url: null,
         location: null,
@@ -148,7 +134,7 @@ export default {
       },
       display_repo: {
         name: undefined,
-        description: undefined,
+        description: "< Hover a project to display >",
       }
     };
   },
@@ -157,10 +143,7 @@ export default {
       return this.$store.getters.github_user;
     },
     repos_sorted: function () {
-      return {
-        forked: this.$store.getters.repos_forked,
-        op: this.$store.getters.repos_op
-      };
+      return this.$store.getters.repos;
     },
     displayreponame: function () {
       return this.display_repo.name;
@@ -173,6 +156,8 @@ export default {
       this.$store.commit('update_github')
       console.log("github created")
       console.log(this.$store.getters.github_user)
+      if (this.repos_sorted == null)
+        this.errormsg = "github api failed"
   },
   methods: {
     format_timestamp: function (timestamp) {
@@ -191,7 +176,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .github {
-  background-color: var(--pale-blu);
 
   height: auto;
 
@@ -213,6 +197,10 @@ export default {
   width:300px;
   height:100px;
   overflow:scroll;
+}
+.selected{
+  border: 2x solid var(--drk-ceru);
+  border-color:blue;
 }
 .spacer{
   height:30px;

@@ -1,8 +1,16 @@
 import axios from "axios"
 
+const token = "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"
+
 export async function github_userdata (username){
     let userapi = "https://api.github.com/users/" + username
-    return axios.get(userapi).then((resp) => {
+    return axios.get(userapi,{
+        headers: {
+            Authorization: 'Bearer ' + token //the token is a variable which holds the token
+          } 
+
+        
+    }).then((resp) => {
         console.log("userdata: ", resp.data)
         return resp.data;
       });
@@ -11,10 +19,10 @@ export async function github_userdata (username){
 export async function github_repodata (username){
     let repoapi = "https://api.github.com/users/" + username + "/repos"
     return axios.get(repoapi,{
-        auth: {
-            'user': username,
-            'pass': "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"
-        }
+        headers: {
+            Authorization: 'Bearer ' + token //the token is a variable which holds the token
+          } 
+
     }
     ).then((resp) => {
 

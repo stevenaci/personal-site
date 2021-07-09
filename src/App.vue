@@ -1,22 +1,11 @@
 <template>
   <div>
     <nav>
-      <table>
-        <tr>
-          <!-- <td>
-      <RouteCap routeto="/home" text="home"/>
-          </td> -->
-          <td>
-      <RouteCap routeto="/" text="home"/>
-          </td>
-          <td>
+
       <RouteCap routeto="/git" text="github"/>
-          </td>
-          <td>
+
       <RouteCap routeto="/about" text="about the site"/>
-          </td>
-          </tr>
-        </table>
+
     </nav>
     <router-view class="window"></router-view>
 
@@ -44,7 +33,7 @@ export default {
   --pale-grn:#dff2d8;
   --olive-grn:#5b8266;
   --pale-blu:#acb0eb;
-  --palr-blu:#eeefff;
+  --palr-blu:#c7c8da;
   --drk-ceru:#45448f;
   --vdrk-ceru:#292855;
   --drk-blu:#2c303d;
@@ -68,14 +57,16 @@ td {
 
 }
 table{
+    background-color: inherit;
     border-collapse:collapse;
 }
 nav{
-
   border:2px solid var(--pale-blu);
-  display:inline-block;
-  width:auto;
+  width:fit-content;
   font-size:1.2em;
+  position:absolute;
+  left:4%;
+  top:4%;
 }
 
 @keyframes blink{
@@ -83,22 +74,29 @@ nav{
   50% {background-color: var(--pale-blu)}
   100% {background-color: var(--palr-blu)}
 }
-
+h2 {
+  text-align:left;
+}
 ul {
   list-style-type: none;
-  padding: 0;
+  text-align:left;
 }
 li {
   display: inline-block;
   margin: 0 10px;
-  width:550px;
+  width:40%;
+}
+.highlight{
+  color: var(--olive-grn);
 }
 
-.highlight:hover{
+.highlight_rollover:hover{
   background-color:var(--palr-blu);
   animation: 5s infinite linear blink;
 }
-
+.window{
+  padding-top:5%;
+}
 .blink{
   animation: 5s infinite linear blink;
 }
@@ -112,8 +110,9 @@ input{
     background-color:var(--palr-blu);
 }
 body{
-  background-color:var(--pale-blu);
-  
+  background-color:var(--palr-blu);
 }
-
+a {
+  color: var(--olive-grn);
+}
 </style>

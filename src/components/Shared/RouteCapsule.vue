@@ -23,7 +23,7 @@ export default {
 <style scoped>
 
 .nav-item{
-  display:inline;
+  width:100%;
   text-decoration:none;
   text-align:left;
   padding-left:8px;

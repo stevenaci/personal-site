@@ -1,33 +1,29 @@
 <template>
   <div class="hello">
-
-<ul>
+<Home/>
 <li> 
-  <table>
-<tr>
-  <td>
-  This page was made with the help of <a :href="hyperlinks.vue">vue.js</a>. 
-  </td>
-  </tr>
-<tr>
-  <td>
-It is hosted via
-<a :href="hyperlinks.nginx">nginx</a> on a 
-<a :href="hyperlinks.vultr">vultr.com</a> VPS. 
-</td>
-  </tr>
-  </table>
-<br>
+   <h2> About the site:</h2>
+  <ul>
+  This page was made with my javascript framework of choice, <a :href="hyperlinks.vue">Vue.js</a>.
+  </ul>
+  <ul>
+Its hosted with plain
+<a :href="hyperlinks.nginx">Nginx</a> on a 
+Debian 10 VPS. 
+ </ul>
 </li>
-</ul>
   </div>
 </template>
 
 <script>
+import Home from './../Home/Home.vue'
 export default {
   name: 'About',
   props: {
     msg: String
+  },
+  components:{
+    Home
   },
   data: function(){
       return{
@@ -52,7 +48,5 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #12882f;
-}
+
 </style>
