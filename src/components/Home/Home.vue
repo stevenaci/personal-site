@@ -4,14 +4,14 @@
 <li>
  <h2> About me:</h2>
   <ul>
-    I'm a software developer from Canada, with a previous background as a Technical Artist. The Digital Art software I grew up with and spent countless hours in, were my inspiration to follow this path. 
-    I want to make tools that enable other people to do amazing things.
+    I'm a software developer from Canada, with a previous background as a Technical Artist. The software advances in 3d and Digital Art Production have been my inspiration. 
+    I want to make tools that enable people to do amazing things.
   </ul>
   <ul>
     Right now this page is just a frontend for my github.com, but I'll be adding links to some of my other projects and webpages soon.
   </ul>
   <ul>
-    If you're interested in working with me, it would be great to hear from you: <div class="highlight"> stevenalexcarino@gmail.com </div>
+    If you're interested in working with me, please contact me: <div class="highlight"> stevenalexcarino@gmail.com </div>
   </ul>
 </li>
   </div>
