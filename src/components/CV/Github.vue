@@ -196,7 +196,6 @@ export default {
 .desc {
   width:300px;
   height:100px;
-  overflow:scroll;
 }
 .selected{
   border: 2x solid var(--drk-ceru);

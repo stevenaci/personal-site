@@ -59,6 +59,7 @@ td {
 table{
     background-color: inherit;
     border-collapse:collapse;
+
 }
 nav{
   border:2px solid var(--pale-blu);
