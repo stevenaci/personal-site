@@ -53,13 +53,14 @@ export default {
 }
 
 td {
-  border: 2px solid var(--palr-blu);
+  border: 2px solid var(--pale-blu);
 
 }
+.noborder{
+  border:0px solid black;
+}
 table{
-    background-color: inherit;
-    border-collapse:collapse;
-
+  background-color: inherit;
 }
 nav{
   border:2px solid var(--pale-blu);

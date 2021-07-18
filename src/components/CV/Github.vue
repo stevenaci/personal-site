@@ -82,17 +82,16 @@
   
         </table>   
 
-  <td >
-    <table>
-<tr>
-  </tr>
+  <td class="noborder">
+
   <tr>
-    <td/>
+    <td>
+    </td>
             <td>Details</td>
     </tr>
       <tr>
 
-        <td>Description</td>
+        <td>Description:</td>
         <td class="desc">
         {{ display_repo.description }}
         {{ errormsg }}
@@ -104,9 +103,8 @@
 
         <td>{{ display_repo.language }}</td>
       </tr>
-    </table>
-
   </td>
+
       </tr>
     </table>
 
