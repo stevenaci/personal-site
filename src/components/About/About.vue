@@ -2,15 +2,20 @@
   <div class="hello">
 <Home/>
 <li> 
-   <h2> About the site:</h2>
+
+
   <ul>
-  This page was made with my javascript framework of choice, <a :href="hyperlinks.vue">Vue.js</a>.
+     <h3>Thanks for visiting,</h3>
+    If you're interested in working with me please send me an email: <div class="highlight"> stevenalexcarino@gmail.com </div>
   </ul>
   <ul>
-Its hosted with plain
-<a :href="hyperlinks.nginx">Nginx</a> on a 
-Debian 10 VPS. 
- </ul>
+  <h3> Libraries used on this site:</h3>
+    <a :href="hyperlinks.vue">Vue.js</a>
+    <br>
+    <a :href="hyperlinks.nginx">Nginx</a> 
+    <br>
+    <a :href="hyperlinks.debian">Debian 10</a>
+  </ul>
 </li>
   </div>
 </template>
@@ -30,7 +35,8 @@ export default {
           hyperlinks:{
               "vue":"https://v3.vuejs.org/guide/migration/introduction.html#overview",
               "vultr":"https://vultr.com",
-              "nginx":"https://nginx.org"
+              "nginx":"https://nginx.org",
+              "debian":"https://www.debian.org"
           }
       }
   }
