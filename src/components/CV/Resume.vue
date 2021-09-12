@@ -17,8 +17,6 @@
         return{
             
         }
-    },
-    async created(){
     }
   }
   </script>
