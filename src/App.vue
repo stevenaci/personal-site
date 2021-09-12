@@ -3,7 +3,7 @@
     <nav>
 
       <RouteCap routeto="/git" text="github"/>
-
+      <!-- <RouteCap routeto="/projects" text="projects"/> -->
       <RouteCap routeto="/about" text="about the site"/>
 
     </nav>
@@ -28,6 +28,11 @@ export default {
 @font-face {
     font-family: Noto;
     src: url("assets/NotoSerifJP-Medium.otf") format("opentype");
+}
+.tr{
+  
+  border: 2x solid var(--drk-ceru);
+  text-align:center;
 }
 :root{
   --pale-grn:#dff2d8;
@@ -78,16 +83,13 @@ nav{
 }
 h2 {
   text-align:left;
+  color:var(--dark-ceru)
 }
 ul {
   list-style-type: none;
   text-align:left;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-  width:40%;
-}
+
 .highlight{
   color: var(--olive-grn);
 }
@@ -98,7 +100,11 @@ li {
 }
 .window{
   padding-top:5%;
+  display: inline-block;
+  margin: 0 5px;
+  width:40%;
 }
+
 .blink{
   animation: 5s infinite linear blink;
 }
@@ -117,4 +123,5 @@ body{
 a {
   color: var(--olive-grn);
 }
+
 </style>

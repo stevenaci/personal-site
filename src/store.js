@@ -1,6 +1,8 @@
 
 import { createStore } from 'vuex'
-import {github_userdata, github_repodata} from './api.js'
+import {  github_userdata, github_repodata  } from './api.js'
+import GraphicProject from './components/Projects/GraphicProject.vue'
+import { shallowRef} from 'vue'
 
 export const store = createStore({
     state () {
@@ -8,6 +10,9 @@ export const store = createStore({
         github:{
           user:{},
           repos:[]
+        },
+        projects:{
+          'GraphicProject': shallowRef(GraphicProject)
         }
       }
     },
@@ -28,16 +33,11 @@ export const store = createStore({
         return state.github.user;
       },
       repos: state=>{
-      console.log(state.github.repos)
-      return state.github.repos;
+        
+        return state.github.repos;
       },
-      // repos_forked: state=>{
-      //   console.log(state.github.repos)
-      //   return state.github.repos.filter((x) => x.fork == true);
-      // },
-      // repos_op: state=>{
-      //   return state.github.repos.filter((x) => x.fork == false);
-      // }
-
+      projects: state=>{
+        return state.projects;
+      }
     }
   });

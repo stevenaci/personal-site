@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
 <Home/>
-<li> 
+
 
 
   <ul>
@@ -16,7 +16,7 @@
     <br>
     <a :href="hyperlinks.debian">Debian 10</a>
   </ul>
-</li>
+
   </div>
 </template>
 

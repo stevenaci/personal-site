@@ -1,6 +1,5 @@
 <template>
   <div class="github">
-    <li>
     <table>
       <!-- <tr>
         <td>
@@ -66,7 +65,7 @@
           <td>
               <button class="repobtn highlight_rollover" v-on:click="go_to(r.html_url)">
               {{ r.name }}
-
+              {{r.language}}
             </button>
           </td>
 
@@ -110,7 +109,6 @@
 
     <tr>      </tr>
 
-    </li>
   </div>
 </template>
 
@@ -123,6 +121,7 @@ export default {
   },
   data: function () {
     return {
+      repos:null,
       errormsg:"",
       user: {
         avatar_url: null,
@@ -152,8 +151,6 @@ export default {
   },
   async beforeMount() {
       this.$store.commit('update_github')
-      console.log("github created")
-      console.log(this.$store.getters.github_user)
       if (this.repos_sorted == null)
         this.errormsg = "github api failed"
   },
@@ -186,11 +183,7 @@ export default {
 .repos{
   text-align:left;
 }
-.hdr{
-  
-  border: 2x solid var(--drk-ceru);
-  text-align:center;
-}
+
 .desc {
   width:300px;
   height:100px;

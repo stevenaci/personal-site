@@ -2,7 +2,7 @@ import { createWebHistory, createRouter} from 'vue-router'
 
 import About from './components/About/About.vue'
 import Github from './components/CV/Github.vue'
-
+import Projects from './components/Projects/Projects.vue'
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -18,6 +18,9 @@ export const router = createRouter({
         {
           path:'/about',
           component: About,
+        },        {
+          path:'/projects',
+          component: Projects,
         },
         {
           path:'/*',
