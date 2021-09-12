@@ -29,9 +29,12 @@ export default {
     font-family: Noto;
     src: url("assets/NotoSerifJP-Medium.otf") format("opentype");
 }
+.td{
+  border: 0px solid var(--drk-ceru);
+}
 .tr{
   
-  border: 2x solid var(--drk-ceru);
+  border: 2px solid var(--drk-ceru);
   text-align:center;
 }
 :root{
@@ -66,6 +69,7 @@ td {
 }
 table{
   background-color: inherit;
+
 }
 nav{
   border:2px solid var(--pale-blu);
@@ -102,7 +106,7 @@ ul {
   padding-top:5%;
   display: inline-block;
   margin: 0 5px;
-  width:40%;
+  width:80%;
 }
 
 .blink{

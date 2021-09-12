@@ -1,85 +1,68 @@
 <template>
   <div class="github">
-    <table>
-      <!-- <tr>
-        <td>
-          <button class="highlight" v-on:click="update_user(username)"> refresh </button>
-          <input type="text" v-model="username" />
-        </td>
-      </tr> -->
-      <tr>
 
-        </tr>
-      <tr>
-        <td>
-          <img class="avatar" :src="userdata.avatar_url" />
-        </td>
-        <td>
-          <table>
-            <tr>
-              <td>User:</td>
-              <td>
-                {{ userdata.login }}
-              </td>
-            </tr>
-            <tr>
-              <td>Name:</td>
-              <td>
-                {{ userdata.name }}
-              </td>
-            </tr>
-            <tr>
-              <td>Location: </td>
-              <td>
-                {{ userdata.location }}
-              </td>
-            </tr>
-            <tr>
+<!-- usertable -->
+<table>
+  <tr>
+    <td>
+<table>
+  <tr>
+    <img class="avatar" :src="userdata.avatar_url" />
+    </tr>
 
-            </tr>
+    <tr>User:
+      {{ userdata.login }}
+    </tr>
 
-            <tr>
-              <td>Last Update:</td>
-              <td>
-                {{ format_timestamp(userdata.updated_at) }}
-              </td>
-            </tr>
-            <tr></tr>            
-          </table>
-        </td>
-      </tr>
-      <tr class="spacer">
-  </tr>
-      <tr>
-      <td class="hdr">Projects</td>
+    <tr>Name:
+      {{ userdata.name }}
+    </tr>
 
-      </tr>
-      <tr>
-        <table>
-          <tr
-            :class="repos"
-            v-for="r in repos_sorted"
-            :key="r.url"
-            v-on:mouseover="display_repo = r"
-          >
-          <td>
-              <button class="repobtn highlight_rollover" v-on:click="go_to(r.html_url)">
-              {{ r.name }}
-              {{r.language}}
-            </button>
-          </td>
+    <tr>Location: 
+      {{ userdata.location }}
+    </tr>
 
-          </tr>
-      <tr>
-      </tr>
-      <tr class="hdr">
-
-      </tr>
-
-      <tr>
-      </tr>
+    <tr>
+      Public Repos: {{ userdata.public_repos }} 
+    </tr>
   
-        </table>   
+    <tr>
+      Private Repos: {{ userdata.total_private_repos }}
+    </tr>  
+    <tr class="spacer">
+    </tr>
+</table>
+</td>
+<!-- projtable -->
+<table>
+  <tr>
+  <td class="hdr">Projects</td>
+  </tr>
+  <tr>
+<table>
+      <tr
+        :class="repos"
+        v-for="r in repos_sorted"
+        :key="r.url"
+        v-on:mouseover="display_repo = r"
+      >
+      <td>
+          <button class="repobtn highlight_rollover" v-on:click="go_to(r.html_url)">
+          {{ r.name }}
+          {{r.language}}
+        </button>
+      </td>
+
+      </tr>
+  <tr>
+  </tr>
+  <tr class="hdr">
+
+  </tr>
+  <tr>
+  </tr>
+
+</table>   
 
   <td class="noborder">
 
@@ -103,13 +86,11 @@
         <td>{{ display_repo.language }}</td>
       </tr>
   </td>
-
       </tr>
-    </table>
-
-    <tr>      </tr>
-
-  </div>
+</table>
+</tr>
+  </table>
+</div>
 </template>
 
 <script>
