@@ -49,7 +49,6 @@
       <td>
           <button class="repobtn highlight_rollover" v-on:click="go_to(r.html_url)">
           {{ r.name }}
-          {{r.language}}
         </button>
       </td>
 
