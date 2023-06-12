@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const token = "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"
+const token = process.env.GITHUB_TOKEN;
 
 export async function github_userdata (username){
     let userapi = "https://api.github.com/users/" + username
