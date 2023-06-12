@@ -1,4 +1,4 @@
-# portfolio
+# Steven C's portfolio site
 
 ## Project setup
 ```
