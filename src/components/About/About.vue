@@ -1,20 +1,9 @@
 <template>
   <div class="hello">
 <Home/>
-
-
-
   <ul>
-     <h3>Thanks for visiting,</h3>
-    If you're interested in working with me please send me an email: <div class="highlight"> stevenalexcarino@gmail.com </div>
-  </ul>
-  <ul>
-  <h3> Libraries used on this site:</h3>
-    <a :href="hyperlinks.vue">Vue.js</a>
-    <br>
-    <a :href="hyperlinks.nginx">Nginx</a> 
-    <br>
-    <a :href="hyperlinks.debian">Debian 10</a>
+    <h3>Thanks for visiting,</h3>
+    email: <div class="highlight"> stevenalexcarino@gmail.com </div>
   </ul>
 
   </div>
